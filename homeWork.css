@@ -1,0 +1,161 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+li {
+  list-style: none;
+  color: white;
+  padding: 5px;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+.header {
+  display: flex;
+  background-color: blue;
+  justify-content: flex-end;
+  flex: 2;
+}
+
+.main {
+  background-color: green;
+  height: 65px;
+  flex: 10;
+}
+
+.footer {
+  background-color: red;
+  height: 65px;
+  flex: 2;
+}
+
+.header__nav {
+  background: rgb(249, 110, 110);
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-end; */
+}
+
+.header__nav__list {
+  background: rgb(37, 32, 22);
+  display: flex;
+  /* justify-content: flex-end; */
+  gap: 4px;
+  padding: 5px;
+}
+
+.nav__item:hover {
+  color: darkgreen;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.main__button__bar {
+  background-color: antiquewhite;
+  display: flex;
+  /* flex: 1 wrap; */
+  flex-grow: 1;
+  flex-wrap: wrap;
+  /* align-items: baseline; */
+  justify-content: center;
+  align-content: flex-start;
+  align-items: start;
+}
+
+.main__button__bar span {
+  color: white;
+  background-color: lightblue; /* สีพื้นหลังของแต่ละ span */
+  padding: 5px; /* ขอบโดยรอบของแต่ละ span */
+  margin: 5px 5px;
+  border-radius: 20%;
+}
+
+/* สีพื้นหลังต่าง ๆ สำหรับแต่ละ span */
+.main__button__bar span:nth-child(1) {
+  background-color: lightblue;
+}
+
+.main__button__bar span:nth-child(2) {
+  background-color: lightgreen;
+}
+
+.main__button__bar span:nth-child(3) {
+  background-color: lightcoral;
+}
+
+.main__market {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 11;
+}
+
+.market_form {
+    flex: 1;
+    background: wheat;
+}
+.market_photo {
+    flex: 5;
+    background-color: aliceblue;
+    flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  .header {
+    justify-content: center;
+  }
+
+  .header__nav {
+    flex: 1;
+  }
+
+  .header__nav__list {
+    /* background-color: aquamarine; */
+    flex: 1;
+    justify-content: space-around;
+  }
+
+  .main__button__bar span {
+    align-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    background-color: blueviolet;
+    flex-direction: column;
+    flex: 3;
+  }
+
+  .header__nav {
+    flex: 1;
+  }
+
+  .header__nav__list {
+    flex-direction: column;
+    align-items: center;
+    padding: 4px;
+  }
+
+  .nav__item {
+    padding: 5px;
+    margin: 4px;
+  }
+}
