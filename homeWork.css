@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+              
 * {
   padding: 0;
   margin: 0;
@@ -5,9 +7,11 @@
 }
 
 img {
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10%;
 }
 
 li {
@@ -16,59 +20,78 @@ li {
   padding: 5px;
 }
 
-body {
+body {       
+  font-family: 'Playfair Display', serif;                            
   height: 100vh;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   font-size: 1.5rem;
+  background-color: 053B50;
+  color: #EEEEEE;
 }
 
 .header {
+  background-color: #176B87;
+  width: 100%;
+  position: fixed;
   display: flex;
-  background-color: blue;
+  /* background-color: blue; */
   justify-content: flex-end;
-  flex: 2;
+  /* flex: 2; */
 }
 
 .main {
-  background-color: green;
+  /* background-color: #64CCC5; */
+  display: block;
+  margin: 65px 0px;
+  /* background-color: green; */
   height: 65px;
-  flex: 10;
+  /* flex: 10; */
 }
 
 .footer {
-  background-color: red;
+  background-color: #176B87;
+  position: fixed;
+  width: 100%;
+  /* display: block;
+  background-color: red; */
   height: 65px;
-  flex: 2;
+  /* flex: 2; */
+  bottom: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.fooer p {
+  height: 100%;
 }
 
 .header__nav {
-  background: rgb(249, 110, 110);
+  /* background: rgb(249, 110, 110); */
   display: flex;
   align-items: center;
   /* justify-content: flex-end; */
 }
 
 .header__nav__list {
-  background: rgb(37, 32, 22);
+  /* background: rgb(37, 32, 22); */
+
   display: flex;
   /* justify-content: flex-end; */
-  gap: 4px;
-  padding: 5px;
+  gap: 9px;
+  padding: 10px 10px;
 }
 
 .nav__item:hover {
   color: darkgreen;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-}
-
 .main__button__bar {
-  background-color: antiquewhite;
+  
   display: flex;
   /* flex: 1 wrap; */
   flex-grow: 1;
@@ -80,42 +103,71 @@ body {
 }
 
 .main__button__bar span {
-  color: white;
-  background-color: lightblue; /* สีพื้นหลังของแต่ละ span */
-  padding: 5px; /* ขอบโดยรอบของแต่ละ span */
+  
+  color: #232D3F;
+  font-weight: 600;
+  /* สีพื้นหลังของแต่ละ span */
+  background-color: #64CCC5;
+  padding: 10px; /* ขอบโดยรอบของแต่ละ span */
   margin: 5px 5px;
-  border-radius: 20%;
+  border-radius: 8%;
 }
 
-/* สีพื้นหลังต่าง ๆ สำหรับแต่ละ span */
-.main__button__bar span:nth-child(1) {
-  background-color: lightblue;
-}
 
-.main__button__bar span:nth-child(2) {
-  background-color: lightgreen;
-}
-
-.main__button__bar span:nth-child(3) {
-  background-color: lightcoral;
-}
 
 .main__market {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  flex: 11;
+  /* flex: 11; */
 }
 
-.market_form {
-    flex: 1;
-    background: wheat;
+.market__form {
+  display: flex;
+  justify-content: space-between;
+  /* flex: 1; */
+  /* background: wheat; */
 }
-.market_photo {
-    flex: 5;
-    background-color: aliceblue;
-    flex-direction: row;
+
+.market__form h2 {
+  padding-left: 50px;
 }
+.market__photo {
+  margin-top: 20px;
+  margin-bottom: 70px;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  display: flex;
+  /* flex: 5; */
+  /* background-color: aliceblue; */
+}
+
+.market__photo div {
+  width: 300px;
+  background-color: #176B87;
+  padding: 5px;
+  border-radius: 10%;
+}
+
+.main__button__bar span:hover {
+  box-shadow: 0 8px 16px 0 #DDF2FD;
+  cursor: pointer;
+} 
+ 
+.market__photo div:hover  {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.just__form select{
+  width: 200px;
+  height: 100%;
+  margin: 5px;
+  font-size: 18px;
+}
+
 
 @media (max-width: 768px) {
   .header {
@@ -139,7 +191,7 @@ body {
 
 @media (max-width: 480px) {
   .header {
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     flex-direction: column;
     flex: 3;
   }
@@ -157,5 +209,9 @@ body {
   .nav__item {
     padding: 5px;
     margin: 4px;
+  }
+
+  .main__button__bar {
+    margin-top: 140px ;
   }
 }
