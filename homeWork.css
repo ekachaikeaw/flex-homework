@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
-              
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -20,25 +20,37 @@ li {
   padding: 5px;
 }
 
-body {       
-  font-family: 'Playfair Display', serif;                            
+body {
+  font-family: "Playfair Display", serif;
   height: 100vh;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   font-size: 1.5rem;
   background-color: 053B50;
-  color: #EEEEEE;
+  color: #eeeeee;
 }
 
 .header {
-  background-color: #176B87;
+  background-color: #176b87;
   width: 100%;
   position: fixed;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   /* background-color: blue; */
-  justify-content: flex-end;
-  /* flex: 2; */
+  /*flex: 2; */
+}
+
+#searchbar {
+  margin: 10px 0;
+  padding: 3px;
+  font-size: 17px;
+  width: 50%;
+}
+
+.searchbar {
+  margin-left: 10px;
 }
 
 .main {
@@ -51,7 +63,7 @@ body {
 }
 
 .footer {
-  background-color: #176B87;
+  background-color: #176b87;
   position: fixed;
   width: 100%;
   /* display: block;
@@ -91,7 +103,6 @@ body {
 }
 
 .main__button__bar {
-  
   display: flex;
   /* flex: 1 wrap; */
   flex-grow: 1;
@@ -103,17 +114,14 @@ body {
 }
 
 .main__button__bar span {
-  
-  color: #232D3F;
+  color: #232d3f;
   font-weight: 600;
   /* สีพื้นหลังของแต่ละ span */
-  background-color: #64CCC5;
+  background-color: #64ccc5;
   padding: 10px; /* ขอบโดยรอบของแต่ละ span */
   margin: 5px 5px;
   border-radius: 8%;
 }
-
-
 
 .main__market {
   display: flex;
@@ -125,6 +133,8 @@ body {
 .market__form {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+
   /* flex: 1; */
   /* background: wheat; */
 }
@@ -146,28 +156,27 @@ body {
 
 .market__photo div {
   width: 300px;
-  background-color: #176B87;
+  background-color: #176b87;
   padding: 5px;
   border-radius: 10%;
 }
 
 .main__button__bar span:hover {
-  box-shadow: 0 8px 16px 0 #DDF2FD;
+  box-shadow: 0 8px 16px 0 #ddf2fd;
   cursor: pointer;
-} 
- 
-.market__photo div:hover  {
+}
+
+.market__photo div:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
-.just__form select{
+.just__form select {
   width: 200px;
   height: 100%;
   margin: 5px;
   font-size: 18px;
 }
-
 
 @media (max-width: 768px) {
   .header {
@@ -194,10 +203,13 @@ body {
     /* background-color: blueviolet; */
     flex-direction: column;
     flex: 3;
+    justify-content: center;
+    align-items: center;
   }
 
   .header__nav {
     flex: 1;
+    order: -1;
   }
 
   .header__nav__list {
@@ -212,6 +224,22 @@ body {
   }
 
   .main__button__bar {
-    margin-top: 140px ;
+    margin-top: 140px;
+  }
+
+  .market__form {
+    justify-content: center;
+  }
+
+  .searchbar {
+    display: flex;
+  }
+
+  #searchbar {
+    width: 100%;
+  }
+
+  .searchbar label {
+    display: none;
   }
 }
